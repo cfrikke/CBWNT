@@ -1,7 +1,24 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CBWNT</title>
+</head>
+<body>
+  <h1>CBWNT</h1>
 
-
-
-<script>
-    window.open("https://cfrikke.github.io/CBWNT/index.html");
-</script>
+  <script>
+    // Open a new tab with the same URL when the page finishes loading.
+    // Note: modern browsers may block this as a popup unless triggered by a user gesture.
+    window.addEventListener('load', () => {
+      try {
+        const win = window.open(window.location.href, '_blank', 'noopener');
+        if (win) win.focus();
+      } catch (e) {
+        // ignore failures (popup blocked, etc.)
+      }
+    });
+  </script>
+</body>
+</html>
